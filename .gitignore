@@ -1,7 +1,9 @@
 node_modules
 dist
 dist-ssr
+dist-types
 .vite
+*.tsbuildinfo
 *.local
 .DS_Store
 .env
