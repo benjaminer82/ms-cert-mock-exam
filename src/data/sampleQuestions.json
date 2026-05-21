@@ -1,0 +1,144 @@
+{
+  "name": "Sample Question Bank",
+  "certification": "AZ-104",
+  "questions": [
+    {
+      "id": "q-single-1",
+      "type": "single",
+      "prompt": "Which Azure service provides a managed Kubernetes cluster?",
+      "options": ["Azure Container Instances", "Azure Kubernetes Service", "Azure Service Fabric", "Azure App Service"],
+      "answer": 1,
+      "explanation": "Azure Kubernetes Service (AKS) is the managed Kubernetes offering in Azure.",
+      "tags": ["Compute", "Containers"]
+    },
+    {
+      "id": "q-multi-1",
+      "type": "multiple",
+      "prompt": "Which TWO authentication methods can be used with Azure AD Conditional Access?",
+      "options": [
+        "FIDO2 security keys",
+        "SMS codes",
+        "Local Windows password only",
+        "Microsoft Authenticator app"
+      ],
+      "answer": [0, 3],
+      "selectCount": 2,
+      "explanation": "FIDO2 keys and the Microsoft Authenticator app are both supported MFA methods for Conditional Access. SMS works but the local Windows password alone is not an MFA factor.",
+      "tags": ["Identity", "Security"]
+    },
+    {
+      "id": "q-yesno-1",
+      "type": "yesno-series",
+      "prompt": "For each of the following statements about Azure Storage, select Yes if it is true, otherwise No.",
+      "statements": [
+        { "statement": "A storage account name must be globally unique across all of Azure.", "answer": "yes" },
+        { "statement": "Blob storage supports hierarchical namespace when Data Lake Gen2 is enabled.", "answer": "yes" },
+        { "statement": "A general-purpose v2 storage account does not support queues.", "answer": "no" }
+      ],
+      "explanation": "Storage account names are globally unique. GPv2 supports blobs, queues, files, and tables. Data Lake Gen2 adds a hierarchical namespace on top of blob storage.",
+      "tags": ["Storage"]
+    },
+    {
+      "id": "q-drag-1",
+      "type": "drag-order",
+      "prompt": "Arrange the following steps to deploy an ARM template in the correct order (top = first).",
+      "items": [
+        "Author the ARM template",
+        "Authenticate to Azure",
+        "Select or create a resource group",
+        "Submit the deployment",
+        "Verify the resources in the portal"
+      ],
+      "explanation": "A deployment proceeds top-to-bottom: write the template, authenticate, target a resource group, submit the deployment, then verify.",
+      "tags": ["IaC", "ARM"]
+    },
+    {
+      "id": "q-build-1",
+      "type": "build-list",
+      "prompt": "Build the correct sequence to grant a user read access to a single storage container using RBAC.",
+      "pool": [
+        "Open the storage container's Access control (IAM) blade",
+        "Click 'Add role assignment'",
+        "Select 'Storage Blob Data Reader'",
+        "Choose the user as the assignee",
+        "Save the assignment",
+        "Edit the container's public access level",
+        "Generate a shared access signature"
+      ],
+      "answer": [
+        "Open the storage container's Access control (IAM) blade",
+        "Click 'Add role assignment'",
+        "Select 'Storage Blob Data Reader'",
+        "Choose the user as the assignee",
+        "Save the assignment"
+      ],
+      "explanation": "RBAC is the recommended way to grant data-plane access to a container. Public access and SAS tokens are unrelated to RBAC.",
+      "tags": ["Identity", "Storage"]
+    },
+    {
+      "id": "q-dropdown-1",
+      "type": "dropdown-sentence",
+      "prompt": "Complete the sentence by choosing the correct option for each placeholder.",
+      "template": "To replicate VMs between regions you should use {{0}}, and to back up VMs you should use {{1}}.",
+      "blanks": [
+        {
+          "options": ["Azure Site Recovery", "Azure Migrate", "Azure Backup"],
+          "answer": 0
+        },
+        {
+          "options": ["Azure Site Recovery", "Azure Backup", "Azure Storage Sync"],
+          "answer": 1
+        }
+      ],
+      "explanation": "Azure Site Recovery handles replication for disaster recovery; Azure Backup handles scheduled backups and restores.",
+      "tags": ["BCDR"]
+    },
+    {
+      "id": "q-hot-1",
+      "type": "hot-area",
+      "prompt": "In the Azure portal, which blade should you click to view a VM's network interfaces? (Labeled-option fallback shown.)",
+      "options": [
+        { "label": "Overview", "isCorrect": false },
+        { "label": "Networking", "isCorrect": true },
+        { "label": "Disks", "isCorrect": false },
+        { "label": "Backup", "isCorrect": false }
+      ],
+      "explanation": "The Networking blade on a VM displays attached NICs, NSG rules, and public IPs.",
+      "tags": ["Networking"]
+    },
+    {
+      "id": "q-case-1",
+      "type": "case-study",
+      "prompt": "Case study: Contoso Ltd.",
+      "scenario": "Contoso has 500 VMs across three Azure regions. They require: (1) a single pane of glass for monitoring, (2) automatic patching of Windows VMs, and (3) cost governance with budgets and alerts.",
+      "subQuestions": [
+        {
+          "id": "q-case-1a",
+          "type": "single",
+          "prompt": "Which service provides centralized monitoring across all 500 VMs?",
+          "options": ["Azure Monitor", "Azure Sentinel", "Azure Advisor", "Azure Service Health"],
+          "answer": 0,
+          "explanation": "Azure Monitor aggregates metrics and logs across resources."
+        },
+        {
+          "id": "q-case-1b",
+          "type": "single",
+          "prompt": "Which feature handles automatic OS patching for Windows VMs?",
+          "options": ["Azure Update Manager", "Azure Automation runbooks", "Defender for Cloud", "Azure Policy"],
+          "answer": 0,
+          "explanation": "Azure Update Manager provides scheduled patch deployment for Azure VMs."
+        },
+        {
+          "id": "q-case-1c",
+          "type": "multiple",
+          "prompt": "Which TWO Cost Management features support the cost-governance requirement?",
+          "options": ["Budgets", "Cost alerts", "Reserved Instance auto-purchase", "Resource locks"],
+          "answer": [0, 1],
+          "selectCount": 2,
+          "explanation": "Budgets and cost alerts are the primary cost-governance tools. Resource locks prevent deletion but don't affect cost."
+        }
+      ],
+      "tags": ["Case study", "Operations"]
+    }
+  ]
+}
