@@ -9,3 +9,9 @@ dist-types
 .env
 .env.local
 .env.*.local
+
+# Personal / copyrighted exam content — do not commit
+dp600.txt
+src/data/*.docx
+src/data/*.pdf
+

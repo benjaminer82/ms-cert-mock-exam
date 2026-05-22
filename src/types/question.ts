@@ -120,6 +120,8 @@ export type Verdict = "correct" | "partial" | "incorrect" | "skipped";
 
 export interface AnsweredRecord {
   questionId: string;
+  /** Snapshot of the exact question variant shown to the user (post-shuffle/rephrase). */
+  question?: Question;
   attempts: number; // 1 = first try; 2/3 = retakes
   verdict: Verdict;
   userAnswer: UserAnswer | null;

@@ -10,21 +10,28 @@ export interface CertProfile {
 }
 
 export const CERT_PROFILES: CertProfile[] = [
-  { code: "AZ-104", name: "Microsoft Azure Administrator", questionCount: 55, durationMinutes: 120 },
-  { code: "AZ-305", name: "Azure Solutions Architect Expert", questionCount: 55, durationMinutes: 120 },
-  { code: "AZ-204", name: "Developing Solutions for Microsoft Azure", questionCount: 55, durationMinutes: 120 },
-  { code: "AZ-500", name: "Azure Security Engineer Associate", questionCount: 55, durationMinutes: 120 },
-  { code: "AZ-900", name: "Microsoft Azure Fundamentals", questionCount: 45, durationMinutes: 65 },
-  { code: "SC-200", name: "Security Operations Analyst", questionCount: 50, durationMinutes: 100 },
-  { code: "SC-300", name: "Identity and Access Administrator", questionCount: 50, durationMinutes: 100 },
-  { code: "SC-900", name: "Security, Compliance, and Identity Fundamentals", questionCount: 45, durationMinutes: 65 },
-  { code: "MS-700", name: "Managing Microsoft Teams", questionCount: 50, durationMinutes: 120 },
-  { code: "MS-900", name: "Microsoft 365 Fundamentals", questionCount: 45, durationMinutes: 65 },
+  // Data & AI (primary focus)
+  { code: "DP-600", name: "Fabric Analytics Engineer Associate", questionCount: 50, durationMinutes: 120 },
+  { code: "DP-700", name: "Fabric Data Engineer Associate", questionCount: 50, durationMinutes: 120 },
   { code: "DP-100", name: "Designing and Implementing a Data Science Solution on Azure", questionCount: 55, durationMinutes: 120 },
   { code: "DP-203", name: "Data Engineering on Microsoft Azure", questionCount: 55, durationMinutes: 120 },
+  { code: "DP-300", name: "Administering Relational Databases on Microsoft Azure", questionCount: 55, durationMinutes: 120 },
   { code: "DP-900", name: "Microsoft Azure Data Fundamentals", questionCount: 45, durationMinutes: 65 },
   { code: "AI-102", name: "Designing and Implementing an Azure AI Solution", questionCount: 55, durationMinutes: 120 },
   { code: "AI-900", name: "Microsoft Azure AI Fundamentals", questionCount: 45, durationMinutes: 65 },
+  // Azure
+  { code: "AZ-104", name: "Microsoft Azure Administrator", questionCount: 55, durationMinutes: 120 },
+  { code: "AZ-204", name: "Developing Solutions for Microsoft Azure", questionCount: 55, durationMinutes: 120 },
+  { code: "AZ-305", name: "Azure Solutions Architect Expert", questionCount: 55, durationMinutes: 120 },
+  { code: "AZ-500", name: "Azure Security Engineer Associate", questionCount: 55, durationMinutes: 120 },
+  { code: "AZ-900", name: "Microsoft Azure Fundamentals", questionCount: 45, durationMinutes: 65 },
+  // Security
+  { code: "SC-200", name: "Security Operations Analyst", questionCount: 50, durationMinutes: 100 },
+  { code: "SC-300", name: "Identity and Access Administrator", questionCount: 50, durationMinutes: 100 },
+  { code: "SC-900", name: "Security, Compliance, and Identity Fundamentals", questionCount: 45, durationMinutes: 65 },
+  // Modern Work
+  { code: "MS-700", name: "Managing Microsoft Teams", questionCount: 50, durationMinutes: 120 },
+  { code: "MS-900", name: "Microsoft 365 Fundamentals", questionCount: 45, durationMinutes: 65 },
 ];
 
 export function getProfile(code: string): CertProfile | undefined {
